@@ -19,7 +19,8 @@ button{
 	height: 30px;
 	font-size: 20px;
 	font-family: arial;
-	color: darkkhaki;
+	color: white;
+	background: khaki;
 	border-radius: 5px;
 	line-height: 20px;
 	text-align: center;
@@ -46,4 +47,14 @@ button:hover{
 #map{
 	margin: 20px auto;
 	box-shadow: 0 0 10px 5px lightgray;
+}
+
+.miniGrid{
+	width: 20px;
+	height: 20px;
+	background: skyblue;
+	border: 1px solid white;
+	
+	box-sizing: border-box;
+	float: left;
 }
