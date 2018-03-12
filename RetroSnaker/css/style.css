@@ -58,3 +58,11 @@ button:hover{
 	box-sizing: border-box;
 	float: left;
 }
+
+.snake{
+	background: orange;
+}
+
+.food {
+	background: #999;
+}
