@@ -1,0 +1,49 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+
+#grid{
+	text-align: center;
+	/*margin: 20px auto;*/
+}
+
+#board{
+	padding: 20px 0;
+	font-size: 20px;
+}
+
+/*style of buttons*/
+button{
+	width: 90px;
+	height: 30px;
+	font-size: 20px;
+	font-family: arial;
+	color: darkkhaki;
+	border-radius: 5px;
+	line-height: 20px;
+	text-align: center;
+	border: none;
+}
+
+button:hover{
+	color: blueviolet;
+}
+
+.start{
+	background: skyblue;
+}
+
+.pause{
+	background: orange;
+}
+
+.medium{
+	background: black;
+}
+
+/*style of map*/
+#map{
+	margin: 20px auto;
+	box-shadow: 0 0 10px 5px lightgray;
+}
