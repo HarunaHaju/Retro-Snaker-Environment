@@ -23,7 +23,7 @@ window.onload = function(){
 
 function init() {
 	mapDiv = document.getElementById("map");
-	score = document.getElementById("board")
+	score = document.getElementById("board");
 	start = document.getElementsByClassName("start")[0];
 	pause = document.getElementsByClassName("pause")[0];
 	high = document.getElementsByClassName("high")[0];
@@ -39,7 +39,7 @@ function drawMap(rowNum, colNum) {
 	mapDiv.style.width = size * colNum + "px";
 	mapDiv.style.height = size * rowNum + "px";
 	
-	//draw grid line by line
+	//draw grid by row
 	for (var i = 0; i < rowNum; i++) {
 		//store the grids by array
 		var rowGrid = [];
@@ -50,6 +50,7 @@ function drawMap(rowNum, colNum) {
 		//add element to map
 		mapDiv.appendChild(rowDiv);
 
+		//draw grid by col
 		for (var j = 0; j < colNum; j++) {
 			//create the mini grid
 			var colDiv = document.createElement("div");
