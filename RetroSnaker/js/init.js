@@ -1,5 +1,5 @@
 var mapDiv;
-var score;
+var scoreHtml;
 
 var start;
 var pause;
@@ -17,18 +17,47 @@ var size = 20;
 //the container of grids
 var mapGrid = [];
 
+//total score
+var score = 0;
+
 window.onload = function(){
 	init();
 }
 
 function init() {
 	mapDiv = document.getElementById("map");
-	score = document.getElementById("board");
+	scoreHtml = document.getElementById("score");
 	start = document.getElementsByClassName("start")[0];
 	pause = document.getElementsByClassName("pause")[0];
 	high = document.getElementsByClassName("high")[0];
 	medium = document.getElementsByClassName("medium")[0];
 	slow = document.getElementsByClassName("slow")[0];
+	
+	score = 0;
+	scoreHtml.innerHTML = score;
+	
+	isSnakeRunning = false;
+	
+	//key listener
+	document.onkeydown = function(Event) {
+		var keyEvent = window.event || Event;
+		switch(keyEvent.keyCode) {
+			case 37:
+				snakeTurnLeft();
+				break;
+			case 38:
+				snakeTurnUp();
+				break;
+			case 39:
+				snakeTurnRight();
+				break;
+			case 40:
+				snakeTurnDown();
+				break;
+			default:
+				break;
+		}
+	}
 	
 	start.onclick = function() {
 		methodStart();
